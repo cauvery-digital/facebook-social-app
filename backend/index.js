@@ -31,3 +31,10 @@ app.use('/users',userRoute)
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`server listening on ${PORT}`))
+
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false,
+  })
+})
