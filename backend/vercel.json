@@ -1,4 +1,14 @@
 {
-	"version": 2,
-	"rewrites": [{ "source": "/(.*)", "destination": "/index.js" }]
+  "build": {
+    "command": "npm run build"
+  },
+  "dev": {
+    "command": "npm run dev"
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ]
 }
